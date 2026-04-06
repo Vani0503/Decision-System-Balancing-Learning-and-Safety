@@ -303,4 +303,76 @@ Machine learning is not just about models.
 It is about building systems that make better decisions over time.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+KEY OBSERVATIONS
+
+- AI system underperforms initially due to exploration  
+- Surpasses greedy after ~10 days  
+- Explore = 6%, Exploit = 94%  
+- Even a small exploration is enough to discover better strategies  
+
+Insight:
+Even with only ~6% exploration, the system adapts to shifting reward patterns.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BEHAVIORAL INSIGHTS
+
+- Early → diverse actions  
+- Later → converges to dominant strategy (offers shown) 
+- Notifications decrease over time  
+
+Insight:
+System learns and stabilises toward optimal behaviour.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONSTRAINT INSIGHT
+
+Constraint trigger rate ≈ 20%
+
+Insight:
+Constraints actively shape behaviour without hurting performance significantly.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TEMPORAL INSIGHT
+
+- AI vs Greedy gap increases after ~day 7  
+- Crossover happens around ~day 10  
+
+Insight:
+Adaptation to changing preferences drives long-term gains.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FINAL INSIGHT
+
+In the early phase, the greedy system performs better because it exploits known high-reward actions.
+
+However, as user preferences shift, the greedy system becomes stuck in outdated patterns.
+
+The epsilon-greedy system, despite exploring only ~6% of the time, discovers new strategies and adapts.
+
+This leads to a crossover point around day 10, after which AI consistently outperforms greedy.
+
+Constraints, triggered ~20% of the time, ensure safe behaviour without harming performance.
+
+Overall:
+In dynamic environments, even limited exploration combined with safety constraints improves long-term outcomes.
+
+
+
+This system is NOT full reinforcement learning.
+
+It is closer to a contextual bandit:
+
+- Single-step optimization
+- No state transition learning
+- No Bellman updates
+- No online learning
+
+Exploration reduces bias but does not fully solve the counterfactual problem.
+
+
+
 
